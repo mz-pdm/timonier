@@ -58,7 +58,8 @@ raise an error."
       (error
        (signal 'travis-http-error
                (list (request-response-status-code response)
-                     (request-response-data response)))))))
+                     (request-response-data response)
+                     (request-response-error-thrown response)))))))
 
 
 
