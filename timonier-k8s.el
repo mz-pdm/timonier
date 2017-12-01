@@ -35,7 +35,7 @@
   "Retrieve the Kubernetes API complete url using the Kubernetes proxy.
 `URI' is the api path."
   (if timonier-k8s-proxy
-      (s-concat timonier-k8s-proxy "/" uri)
+      (s-concat timonier-k8s-proxy uri)
     (error (signal 'timonier-k8s-error '("Kubernetes proxy unknown.")))))
 
 
