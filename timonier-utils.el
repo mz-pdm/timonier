@@ -53,7 +53,7 @@ raise an error."
                            :sync t
                            :data params
                            :parser 'json-read)))
-    (if (= status-code (request-response-status-code response))
+    (if (eql status-code (request-response-status-code response))
         (request-response-data response)
       (error
        (signal 'travis-http-error
